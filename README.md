@@ -1,1 +1,3 @@
 # simpleDB
+
+Author: Hao Xu
