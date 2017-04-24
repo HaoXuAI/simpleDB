@@ -1,6 +1,7 @@
 package simpledb;
 
 import java.io.*;
+import java.util.ArrayList;
 /**
  * BufferPool manages the reading and writing of pages into memory from
  * disk. Access methods call into it to retrieve pages, and it fetches
@@ -19,6 +20,9 @@ public class BufferPool {
     constructor instead. */
     public static final int DEFAULT_PAGES = 50;
 
+    
+	ArrayList<Page> list;
+	
     /**
      * Creates a BufferPool that caches up to numPages pages.
      *
@@ -26,6 +30,7 @@ public class BufferPool {
      */
     public BufferPool(int numPages) {
         // some code goes here
+    	list = new ArrayList<Page>(numPages);
     }
 
     /**
@@ -46,7 +51,12 @@ public class BufferPool {
     public  Page getPage(TransactionId tid, PageId pid, Permissions perm)
         throws TransactionAbortedException, DbException {
         // some code goes here
-        return null;
+        for (Page page : list) {
+        	if (page.getId() == pid) {
+        		return page;
+        	}
+        }
+        throw new DbException("page not exists");
     }
 
     /**
@@ -177,5 +187,10 @@ public class BufferPool {
         // some code goes here
         // not necessary for lab1
     }
+
+	public int getPageSize() {
+		// TODO Auto-generated method stub
+		return BufferPool.PAGE_SIZE;
+	}
 
 }

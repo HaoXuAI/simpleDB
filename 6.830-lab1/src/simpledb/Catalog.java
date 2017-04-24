@@ -16,19 +16,59 @@ import java.util.*;
 
 public class Catalog {
 
+	/**
+	 * item is the nested class to store the content of catalog
+	 */
+	private class Item {
+		private DbFile itemFile;
+		private String itemName;
+		private String itemPkeyField;
+		
+		public Item (DbFile file, String name, String pkeyField) {
+			this.setItemFile(file);
+			this.setItemName(name);
+			this.setItemPkeyField(pkeyField);
+		}
+
+		public String getItemName() {
+			return itemName;
+		}
+
+		public void setItemName(String itemName) {
+			this.itemName = itemName;
+		}
+
+		public DbFile getItemFile() {
+			return itemFile;
+		}
+
+		public void setItemFile(DbFile itemFile) {
+			this.itemFile = itemFile;
+		}
+
+		public String getItemPkeyField() {
+			return itemPkeyField;
+		}
+
+		public void setItemPkeyField(String itemPkeyField) {
+			this.itemPkeyField = itemPkeyField;
+		}
+	}
+	
+	private ArrayList<Item> list;
+	
     /**
      * Constructor.
      * Creates a new, empty catalog.
      */
     public Catalog() {
-        
-    	
+        this.list = new ArrayList<Item>();
     }
 
     /**
      * Add a new table to the catalog.
      * This table's contents are stored in the specified DbFile.
-     * @param file the contents of the table to add;  file.getId() is the identfier of
+     * @param file the contents of the table to add;  file.getId() is the identifier of
      *    this file/tupledesc param for the calls getTupleDesc and getFile
      * @param name the name of the table -- may be an empty string.  May not be null.  If a name
      * @param pkeyField the name of the primary key field
@@ -36,6 +76,8 @@ public class Catalog {
      */
     public void addTable(DbFile file, String name, String pkeyField) {
         // some code goes here
+    	this.list.add(new Item(file, name, pkeyField));
+    	
     }
 
     public void addTable(DbFile file, String name) {
@@ -58,9 +100,14 @@ public class Catalog {
      * Return the id of the table with a specified name,
      * @throws NoSuchElementException if the table doesn't exist
      */
-    public int getTableId(String name) {
+    public int getTableId(String name) throws NoSuchElementException {
         // some code goes here
-        return 0;
+        for (int i = 0; i < list.size(); i++) {
+        	if (list.get(i).getItemName().equals(name)) {
+        		return list.get(i).getItemFile().getId();
+        	}
+        }
+        throw new NoSuchElementException();
     }
 
     /**
@@ -70,7 +117,12 @@ public class Catalog {
      */
     public TupleDesc getTupleDesc(int tableid) throws NoSuchElementException {
         // some code goes here
-        return null;
+        for (Item item : list) {
+        	if (item.getItemFile().getId() == tableid) {
+        		return item.getItemFile().getTupleDesc();
+        	}
+        }
+        throw new NoSuchElementException();
     }
 
     /**
@@ -81,26 +133,46 @@ public class Catalog {
      */
     public DbFile getDbFile(int tableid) throws NoSuchElementException {
         // some code goes here
-        return null;
+        for (Item item : list) {
+        	if (item.getItemFile().getId() == tableid) {
+        		return item.getItemFile();
+        	}
+        }
+        throw new NoSuchElementException();
     }
 
     /** Delete all tables from the catalog */
     public void clear() {
         // some code goes here
+    	this.list = new ArrayList<Item>();
     }
 
     public String getPrimaryKey(int tableid) {
         // some code goes here
+        for (Item item : list) {
+        	if (item.getItemFile().getId() == tableid) {
+        		return item.getItemPkeyField();
+        	}
+        }
         return null;
     }
 
     public Iterator<Integer> tableIdIterator() {
         // some code goes here
-        return null;
+        ArrayList<Integer> tmp = new ArrayList<Integer>();
+        for (Item item : list) {
+        	tmp.add(item.getItemFile().getId());
+        }
+        return tmp.iterator();
     }
 
     public String getTableName(int id) {
         // some code goes here
+        for (Item item : list) {
+        	if (item.getItemFile().getId() == id) {
+        		return item.getItemName();
+        	}
+        }
         return null;
     }
     

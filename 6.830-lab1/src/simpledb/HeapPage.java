@@ -1,8 +1,11 @@
 package simpledb;
 
 import java.util.*;
-import java.io.*;
 
+import org.junit.experimental.theories.Theories;
+
+import java.io.*;
+import java.lang.Math;
 /**
  * HeapPage stores pages of HeapFiles and implements the Page interface that
  * is used by BufferPool.
@@ -65,8 +68,8 @@ public class HeapPage implements Page {
     */
     private int getNumTuples() {        
         // some code goes here
-        return 0;
-
+    	int tuple_size = this.td.getSize();
+        return (BufferPool.PAGE_SIZE * 8) / (tuple_size * 8 + 1);
     }
 
     /**
@@ -76,7 +79,7 @@ public class HeapPage implements Page {
     private int getHeaderSize() {        
         
         // some code goes here
-        return 0;
+        return (int)Math.ceil(getNumTuples() / 8);
                  
     }
     
@@ -102,7 +105,7 @@ public class HeapPage implements Page {
      */
     public HeapPageId getId() {
     // some code goes here
-    throw new UnsupportedOperationException("implement this");
+    	return this.pid;
     }
 
     /**
@@ -273,7 +276,11 @@ public class HeapPage implements Page {
      */
     public int getNumEmptySlots() {
         // some code goes here
-        return 0;
+        int count = 0;
+        for (int i = 0; i < this.getNumTuples(); i++) {
+        	if (!this.getSlot(i)) count++;
+        }
+        return count;
     }
 
     /**
@@ -281,7 +288,9 @@ public class HeapPage implements Page {
      */
     public boolean getSlot(int i) {
         // some code goes here
-        return false;
+    	int headerbyte = i / 8;
+    	int others = i % 8;
+        return (this.header[headerbyte] & (1 << others)) != 0;
     }
 
     /**
@@ -292,14 +301,36 @@ public class HeapPage implements Page {
         // not necessary for lab1
     }
 
+    protected int getNextTupleIndex(int id) {
+    	while (id < this.getNumTuples() && !getSlot(id)) id++;
+    	return id;
+    }
+    
     /**
      * @return an iterator over all tuples on this page (calling remove on this iterator throws an UnsupportedOperationException)
      * (note that this iterator shouldn't return tuples in empty slots!)
      */
     public Iterator<Tuple> iterator() {
         // some code goes here
-        return null;
+        return new TupleIterator();
     }
 
+    private class TupleIterator implements Iterator<Tuple> {
+    	private int curr;
+    	private int maxLen = getNumTuples();
+    	public TupleIterator() {
+    		this.curr = getNextTupleIndex(0);
+    	}
+    	
+    	public boolean hasNext() {
+    		return this.curr < maxLen;
+    	}
+    	
+    	public Tuple next() {
+    		Tuple tuple = tuples[this.curr];
+			this.curr = getNextTupleIndex(this.curr + 1);
+			return tuple;
+    	}
+    }
 }
 

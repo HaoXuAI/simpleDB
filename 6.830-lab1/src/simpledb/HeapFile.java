@@ -15,6 +15,10 @@ import java.util.*;
  */
 public class HeapFile implements DbFile {
 
+	private File file;
+	private TupleDesc tupledescriptor;
+	private int id;
+	
     /**
      * Constructs a heap file backed by the specified file.
      *
@@ -22,6 +26,9 @@ public class HeapFile implements DbFile {
      */
     public HeapFile(File f, TupleDesc td) {
         // some code goes here
+    	this.file = f;
+    	this.tupledescriptor = td;
+    	this.id = f.getAbsoluteFile().hashCode();
     }
 
     /**
@@ -31,7 +38,7 @@ public class HeapFile implements DbFile {
      */
     public File getFile() {
         // some code goes here
-        return null;
+        return this.file;
     }
 
     /**
@@ -45,7 +52,8 @@ public class HeapFile implements DbFile {
     */
     public int getId() {
         // some code goes here
-        throw new UnsupportedOperationException("implement this");
+    	return this.id;
+        
     }
     
     /**
@@ -54,7 +62,8 @@ public class HeapFile implements DbFile {
      */
     public TupleDesc getTupleDesc() {
     	// some code goes here
-    	throw new UnsupportedOperationException("implement this");
+    	return this.tupledescriptor;
+    	
     }
 
     // see DbFile.java for javadocs
@@ -74,7 +83,9 @@ public class HeapFile implements DbFile {
      */
     public int numPages() {
         // some code goes here
-        return 0;
+    	int pageSize = Database.getBufferPool().getPageSize();
+        long fileSize = file.length();
+        return (int) fileSize/pageSize;
     }
 
     // see DbFile.java for javadocs

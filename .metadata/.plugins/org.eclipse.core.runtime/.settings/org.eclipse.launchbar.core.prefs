@@ -1,6 +1,14 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=macosx
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:TupleDescTest,org.eclipse.launchbar.core.descriptorType.default\:TupleTest
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:6.830-lab1,org.eclipse.launchbar.core.descriptorType.default\:TupleDescTest,org.eclipse.launchbar.core.descriptorType.default\:TupleTest,org.eclipse.launchbar.core.descriptorType.default\:New_configuration,org.eclipse.launchbar.core.descriptorType.default\:CatalogTest,org.eclipse.launchbar.core.descriptorType.default\:HeapPaageIdTest,org.eclipse.launchbar.core.descriptorType.default\:New_configuration (1),org.eclipse.launchbar.core.descriptorType.default\:HeapPageReadTest,org.eclipse.launchbar.core.descriptorType.default\:HeapFileReadTest
 eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:6.830-lab1/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:6.830-lab1/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:CatalogTest/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:CatalogTest/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:HeapPageReadTest/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:New_configuration\ (1)/activeLaunchMode=coverage
 org.eclipse.launchbar.core.descriptorType.default\:New_configuration/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:New_configuration/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:TupleDescTest/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:TupleDescTest/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

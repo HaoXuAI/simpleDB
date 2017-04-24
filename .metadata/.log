@@ -66,3 +66,262 @@ Binding(ALT+SHIFT+G,
 
 !ENTRY org.eclipse.launchbar.core 2 0 2017-04-14 16:22:14.394
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2017-04-16 11:30:34.804 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-04-16 11:30:44.385
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2017-04-16 11:30:46.242
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-04-16 11:30:46.242
+!MESSAGE A conflict occurred for ALT+SHIFT+G:
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.emf.codegen.ecore.ui.Generate,Generate Code,
+		Generate code for the EMF models in the workspace,
+		Category(org.eclipse.emf.codegen.ecore.ui.Commands,EMF Code Generation,Commands for the EMF code generation tools,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2cea41ab,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(com.googlecode.goclipse.debug.ui.LaunchShortcut.run,Launch Go Application,
+		Launch Go Application,
+		Category(com.googlecode.goclipse.ui.commands.Category,Goclipse Category,Goclipse commands ,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4c1c134,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-16 11:38:45.551
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-16 11:38:45.554
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2017-04-16 14:23:37.898 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-04-16 14:23:50.000
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2017-04-16 14:23:52.768
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-04-16 14:23:52.768
+!MESSAGE A conflict occurred for ALT+SHIFT+G:
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.emf.codegen.ecore.ui.Generate,Generate Code,
+		Generate code for the EMF models in the workspace,
+		Category(org.eclipse.emf.codegen.ecore.ui.Commands,EMF Code Generation,Commands for the EMF code generation tools,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@618d2191,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(com.googlecode.goclipse.debug.ui.LaunchShortcut.run,Launch Go Application,
+		Launch Go Application,
+		Category(com.googlecode.goclipse.ui.commands.Category,Goclipse Category,Goclipse commands ,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4b1ef6a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-16 18:12:48.446
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-16 18:12:48.450
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2017-04-17 11:46:45.505 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-04-17 11:46:56.350
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2017-04-17 11:46:58.492
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-04-17 11:46:58.492
+!MESSAGE A conflict occurred for ALT+SHIFT+G:
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.emf.codegen.ecore.ui.Generate,Generate Code,
+		Generate code for the EMF models in the workspace,
+		Category(org.eclipse.emf.codegen.ecore.ui.Commands,EMF Code Generation,Commands for the EMF code generation tools,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@72769bf5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(com.googlecode.goclipse.debug.ui.LaunchShortcut.run,Launch Go Application,
+		Launch Go Application,
+		Category(com.googlecode.goclipse.ui.commands.Category,Goclipse Category,Goclipse commands ,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5a63de07,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-17 12:34:48.870
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-17 12:34:48.874
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2017-04-18 19:18:43.599 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-04-18 19:18:54.287
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2017-04-18 19:18:56.170
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-04-18 19:18:56.170
+!MESSAGE A conflict occurred for ALT+SHIFT+G:
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.emf.codegen.ecore.ui.Generate,Generate Code,
+		Generate code for the EMF models in the workspace,
+		Category(org.eclipse.emf.codegen.ecore.ui.Commands,EMF Code Generation,Commands for the EMF code generation tools,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@72769bf5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(com.googlecode.goclipse.debug.ui.LaunchShortcut.run,Launch Go Application,
+		Launch Go Application,
+		Category(com.googlecode.goclipse.ui.commands.Category,Goclipse Category,Goclipse commands ,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5a63de07,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-18 19:19:20.062
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-18 19:19:20.065
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2017-04-19 18:35:42.289 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-04-19 18:35:52.153
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2017-04-19 18:35:54.228
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-04-19 18:35:54.228
+!MESSAGE A conflict occurred for ALT+SHIFT+G:
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.emf.codegen.ecore.ui.Generate,Generate Code,
+		Generate code for the EMF models in the workspace,
+		Category(org.eclipse.emf.codegen.ecore.ui.Commands,EMF Code Generation,Commands for the EMF code generation tools,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5a63de07,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(com.googlecode.goclipse.debug.ui.LaunchShortcut.run,Launch Go Application,
+		Launch Go Application,
+		Category(com.googlecode.goclipse.ui.commands.Category,Goclipse Category,Goclipse commands ,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7d364bce,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-19 18:40:31.263
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-19 18:40:31.267
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2017-04-21 00:19:34.126 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-04-21 00:19:46.075
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2017-04-21 00:19:47.952
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-04-21 00:19:47.952
+!MESSAGE A conflict occurred for ALT+SHIFT+G:
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.emf.codegen.ecore.ui.Generate,Generate Code,
+		Generate code for the EMF models in the workspace,
+		Category(org.eclipse.emf.codegen.ecore.ui.Commands,EMF Code Generation,Commands for the EMF code generation tools,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7be95197,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(com.googlecode.goclipse.debug.ui.LaunchShortcut.run,Launch Go Application,
+		Launch Go Application,
+		Category(com.googlecode.goclipse.ui.commands.Category,Goclipse Category,Goclipse commands ,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7719b257,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-21 00:23:15.169
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-21 00:23:15.173
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+!SESSION 2017-04-21 12:17:23.009 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/haoxu/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-04-21 12:17:32.343
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2017-04-21 12:17:34.125
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2017-04-21 12:17:34.126
+!MESSAGE A conflict occurred for ALT+SHIFT+G:
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(org.eclipse.emf.codegen.ecore.ui.Generate,Generate Code,
+		Generate code for the EMF models in the workspace,
+		Category(org.eclipse.emf.codegen.ecore.ui.Commands,EMF Code Generation,Commands for the EMF code generation tools,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1766b009,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+G,
+	ParameterizedCommand(Command(com.googlecode.goclipse.debug.ui.LaunchShortcut.run,Launch Go Application,
+		Launch Go Application,
+		Category(com.googlecode.goclipse.ui.commands.Category,Goclipse Category,Goclipse commands ,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7be95197,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-21 12:21:20.619
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-04-21 12:21:20.623
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
