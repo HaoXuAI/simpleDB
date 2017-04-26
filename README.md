@@ -24,4 +24,4 @@ A basic database system
 
 – Indices
 
-![alt text](https://raw.githubusercontent.com/cmuhao/simpleDB/blob/master/structure.png)
+![alt text](https://github.com/cmuhao/simpleDB/blob/master/structure.png)
