@@ -23,3 +23,5 @@ A basic database system
 – Fancy relational operators (UNION, etc) – Recovery
 
 – Indices
+
+![alt text](https://raw.githubusercontent.com/cmuhao/simpleDB/blob/master/structure.png)
