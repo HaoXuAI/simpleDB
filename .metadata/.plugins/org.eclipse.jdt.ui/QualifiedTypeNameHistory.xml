@@ -3,6 +3,6 @@
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Objects"/>
-<fullyQualifiedTypeName name="simpledb.BufferPool"/>
 <fullyQualifiedTypeName name="org.junit.experimental.theories.Theories"/>
+<fullyQualifiedTypeName name="simpledb.BufferPool"/>
 </qualifiedTypeNameHistroy>

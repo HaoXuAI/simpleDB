@@ -52,6 +52,7 @@ public class BufferPool {
         throws TransactionAbortedException, DbException {
         // some code goes here
         for (Page page : list) {
+        	//System.out.println(page.getId());
         	if (page.getId() == pid) {
         		return page;
         	}
