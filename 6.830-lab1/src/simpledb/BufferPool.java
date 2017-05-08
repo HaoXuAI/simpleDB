@@ -2,6 +2,9 @@ package simpledb;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 /**
  * BufferPool manages the reading and writing of pages into memory from
  * disk. Access methods call into it to retrieve pages, and it fetches
@@ -20,8 +23,10 @@ public class BufferPool {
     constructor instead. */
     public static final int DEFAULT_PAGES = 50;
 
+    private final int pageNum;
     
-	ArrayList<Page> list;
+	private final Map<PageId, Page> pageIdToPage;
+	private final Map<TransactionId, Set<PageId>> transactionsToPages;
 	
     /**
      * Creates a BufferPool that caches up to numPages pages.
@@ -30,7 +35,10 @@ public class BufferPool {
      */
     public BufferPool(int numPages) {
         // some code goes here
-    	list = new ArrayList<Page>(numPages);
+    	this.pageNum = numPages;
+    	this.pageIdToPage = new HashMap<PageId, Page>();
+    	this.transactionsToPages = new HashMap<>();
+    	//list = new ArrayList<Page>(numPages);
     }
 
     /**
@@ -51,13 +59,18 @@ public class BufferPool {
     public  Page getPage(TransactionId tid, PageId pid, Permissions perm)
         throws TransactionAbortedException, DbException {
         // some code goes here
-        for (Page page : list) {
-        	//System.out.println(page.getId());
-        	if (page.getId() == pid) {
-        		return page;
-        	}
-        }
-        throw new DbException("page not exists");
+    	if (this.pageIdToPage.containsKey(pid)) {
+    		return this.pageIdToPage.get(pid);
+    	}
+    	
+    	int tableid = pid.getTableId();
+    	
+    	Catalog catalog = Database.getCatalog();
+    	DbFile dbFile = catalog.getDbFile(tableid);
+    	Page page = dbFile.readPage(pid);
+        this.pageIdToPage.put(pid, page);
+        return page;
+        //throw new DbException("page not exists");
     }
 
     /**

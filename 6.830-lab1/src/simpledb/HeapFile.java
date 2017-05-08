@@ -122,60 +122,91 @@ public class HeapFile implements DbFile {
     // see DbFile.java for javadocs
     public DbFileIterator iterator(TransactionId tid) {
         // some code goes here
-    	return new HeapFileIterator(this, tid);
+    	return new HeapFileIterator(this.getId(), this.numPages(), tid);
     }
     
     public static class HeapFileIterator implements DbFileIterator {
 
-    	private TransactionId tid;
-		private HeapPageId pid;
-		private int currPgId;
-		private int numPages;
+    	private final TransactionId tid;
+    	private int currentPageNum;
+		private final int numPages;
 		private Iterator<Tuple> iter;
+		private final int tableId;
+		private boolean isOpen;
+		private Tuple next;
     	
-		public HeapFileIterator(HeapFile file, TransactionId tid) {
+		public HeapFileIterator(int tableId, int pageNum, TransactionId tid) {
 			// TODO Auto-generated constructor stub
+			this.tableId = tableId;
+			this.numPages = pageNum;
 			this.tid = tid;
-			this.numPages = file.numPages();
-			this.currPgId = numPages + 1;
-			this.pid = new HeapPageId(file.getId(), this.currPgId);
-			
-			
+			this.isOpen = false;
 		}
 
+		private Iterator<Tuple> getPageIterator(int pageNum) throws DbException,
+				TransactionAbortedException {
+			PageId pageId = new HeapPageId(tableId, pageNum);
+			HeapPage page = (HeapPage) Database.getBufferPool().getPage(
+				tid, pageId, Permissions.READ_ONLY);
+			return page.iterator();
+		}
 		@Override
 		public void open() throws DbException, TransactionAbortedException {
 			// TODO Auto-generated method stub
-			HeapPage page = (HeapPage) Database.getBufferPool().getPage(this.tid, this.pid, Permissions.READ_WRITE);
-			iter = page.iterator();
+			if (this.isOpen) {
+				throw new DbException("already opened");
+			}
+			this.isOpen = true;
+			rewind();
 		}
 
 		@Override
 		public boolean hasNext() throws DbException, TransactionAbortedException {
 			// TODO Auto-generated method stub
-			if (iter == null) {
-				return false;
-			}
-			return iter.hasNext();
+			return this.isOpen && this.next != null;
 		}
 
 		@Override
 		public Tuple next() throws DbException, TransactionAbortedException, NoSuchElementException {
 			// TODO Auto-generated method stub
-			if (this.hasNext()) return null;
-			throw new NoSuchElementException();
+			if (! this.isOpen || ! this.hasNext()) {
+				throw new NoSuchElementException("not appicable");
+			}
+			Tuple tuple = this.next;
+			this.next = getNext();
+			return tuple;
 		}
 
+		private void getNextPage() throws DbException, TransactionAbortedException {
+			this.currentPageNum++;
+			if (this.currentPageNum > this.numPages) {
+				return;
+			}
+			this.iter = getPageIterator(this.currentPageNum);
+		}
+		
+		private Tuple getNext() throws DbException, TransactionAbortedException {
+			while (this.currentPageNum < this.numPages) {
+				if (iter.hasNext()) {
+					return iter.next();
+				}
+				getNextPage();
+			}
+			return null;
+		}
+		
 		@Override
 		public void rewind() throws DbException, TransactionAbortedException {
 			// TODO Auto-generated method stub
-			
+			this.currentPageNum = 0;
+			this.iter = getPageIterator(this.currentPageNum);
+			this.next = getNext();
 		}
 
 		@Override
 		public void close() {
 			// TODO Auto-generated method stub
-			
+			this.isOpen = false;
 		}
     	
     }
